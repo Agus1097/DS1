@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TP1 - HTML</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: Moderustic;
+        }
+
+        section {
+            height: 100vh;
+        }
+
+        .h1-custom {
+            text-shadow: 3px 3px 6px rgb(255, 0, 0);
+            color: red;
+        }
+
+        h2 {
+            color: blue;
+        }
+
+        h3 {
+            color: green;
+        }
+
+        h4 {
+            text-decoration: underline;
+        }
+
+        h5 {
+            font-style: italic;
+        }
+
+        h6 {
+            font-weight: bold;
+        }
+
+        table {
+            width: 50%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            text-align: left;
+            font-family: Arial, sans-serif;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        thead {
+            background-color: #f2f2f2;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="inicio">
+        <h1>
+            TP N°1 - HTML
+        </h1>
+        <p>Cada seccion se encuentra en una pantalla. Para ello puede acceder por aca:</p>
+        <ul>
+            <li><a href="#texto">1 - Encabezados y Propiedades del Texto</a></li>
+            <li><a href="#listas">2 - Enlaces y Listas</a></li>
+            <li><a href="#multimedia">3 - Elementos Multimedia</a></li>
+            <li><a href="#tabla">4 - Tabla</a></li>
+            <li><a href="#formulario">5 - Formulario</a></li>
+        </ul>
+    </section>
+    <section id="texto">
+        <h1>
+            1 - Encabezados y Propiedades del Texto
+        </h1>
+        <h1 class="h1-custom">
+            Este es un texto en h1, con color rojo y sombra
+        </h1>
+        <h2>
+            Este es un texto en h2, con color azul
+        </h2>
+        <h3>
+            Este es un texto en h3, con color verde
+        </h3>
+        <h4>
+            Este es un texto h4 subrayado
+        </h4>
+        <h5>
+            Este es un texto h5 en cursiva
+        </h5>
+        <h6>
+            Este es un texto h6 en negrita
+        </h6>
+        <button onclick="volverAlInicio()">Volver al Inicio</button>
+    </section>
+    <section id="listas">
+        <h1>
+            2 - Enlaces y Listas
+        </h1>
+        <ol>
+            <li><a href="https://www4.frm.utn.edu.ar/" target="_blank">Primer elemento ordenado que redirige a un enlace
+                    externo</a></li>
+            <li><a href="#texto">Segundo elemento ordenado qie redirige a seccion 1</a></li>
+            <li>Tercer elemento ordenado</li>
+        </ol>
+        <ul>
+            <li>Primer elemento desordenado</li>
+            <li>Segundo elemento desordenado</li>
+            <li>Tercer elemento desordenado</li>
+        </ul>
+        <button onclick="volverAlInicio()">Volver al Inicio</button>
+    </section>
+    <section id="multimedia">
+        <h1>
+            3 - Elementos Multimedia
+        </h1>
+        <img src="https://www.argfc.com/wp-content/uploads/2023/06/82322741-8285-4765-a596-aeb7fb400adc.jpeg"
+            alt="El mas grande de mendoza" width="600" height="400">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/9Aytc9O8RdI?si=u9e64EKPRCan6QeS"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button onclick="volverAlInicio()">Volver al Inicio</button>
+    </section>
+    <section id="tabla">
+        <table>
+            <h1>
+                4 - Tabla
+            </h1>
+            <thead>
+                <tr>
+                    <th>Equipo</th>
+                    <th>Puntos</th>
+                    <th>Pais</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Real Madrid</td>
+                    <td>30</td>
+                    <td>España</td>
+                </tr>
+                <tr>
+                    <td>Manchester United</td>
+                    <td>25</td>
+                    <td>Inglaterra</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="volverAlInicio()">Volver al Inicio</button>
+    </section>
+    <section id="formulario">
+        <h1>
+            5 - Formulario
+        </h1>
+        <form action="#inicio" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+        <button onclick="volverAlInicio()">Volver al Inicio</button>
+    </section>
+
+    <script>
+        function volverAlInicio() {
+            document.getElementById("inicio").scrollIntoView({ behavior: "smooth" });
+        }
+    </script>
+</body>
+
+</html>
